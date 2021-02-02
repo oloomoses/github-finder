@@ -1,5 +1,6 @@
 import React, { Component } from 'react'
 import Spinner from '../layout/Spinner';
+import Repos from '../repos/Repos';
 import PropTypes from 'prop-types';
 import { Link } from 'react-router-dom';
 
@@ -7,12 +8,14 @@ class User extends Component {
 
   componentDidMount() {
     this.props.getUser(this.props.match.params.login);
+    this.props.getUserRepos(this.props.match.params.login)
   }
 
   static propTypes = {
     loading: PropTypes.bool,
     getUser: PropTypes.func.isRequired,
     user: PropTypes.object.isRequired,
+    repos: PropTypes.array.isRequired,
   }
 
   render() {
@@ -33,7 +36,7 @@ class User extends Component {
       hireable
     } = this.props.user;
 
-    const { loading } = this.props;
+    const { loading, repos } = this.props;
 
     if (loading) return <Spinner />
     return (
@@ -104,6 +107,8 @@ class User extends Component {
           <div className='badge badge-danger'>Public Repos: {public_repos}</div>
           <div className='badge badge-dark'>Public Gists: {public_gists}</div>
         </div>
+
+        <Repos repos={ repos }/>
       </>
     )
   }
