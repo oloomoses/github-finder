@@ -43,12 +43,13 @@
 <!-- ABOUT THE PROJECT -->
 ## About The Project
 
-This is an application that allows users to find github users. This application uses github API and Axios to get user data.
+This is a React.js application that allows users to find github users. This application uses github API and Axios to get user data.
 ### Built With
 Components of this project is listed below;
 
-* CSS
+* React
 * JSX
+* CSS
 * Javascript - ES6
 * VsCode
 * Github API
@@ -102,10 +103,7 @@ Distributed under the MIT License.
 <!-- ACKNOWLEDGEMENTS -->
 ## Acknowledgements
 * [Microverse Education](https://microverse.org)
-* [ODIN Project](https://www.theodinproject.com/)
 * [GitHub](https://github.com/)
-* [OpenWeatherMap](https://openweathermap.org/)
-
 
 
 
